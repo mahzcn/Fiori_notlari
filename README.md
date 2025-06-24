@@ -2,32 +2,23 @@
 
 ## Index html dosyası ana verilerimin tutulduğu dosyadır 
 
-``` <!DOCTYPE html> <!-- ! yaparak html doc oluşturabilirsin -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiori Eğitim</title> <!-- ! title tag sayfanın başlığını belirler -->
-<!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
-    <!-- ui5.product.list name space'sinin sağ tarafında html alanın yolu bulunmaktadır -->
-    <script
-        id="sap-ui-bootstrap" 
-        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-        data-sap-ui-theme="sap_horizon"
-        data-sap-ui-libs="sap.m"
-        data-sap-ui-compatVersion="edge"
-        data-sap-ui-async="true"
-        data-sap-ui-resourceroots='{
-            "ui5.product.list": "./"
-        }'
-        data-sap-ui-onInıt=""
-    ></script>
-<!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
-</head>
-<body>
-    
-</body>
-</html> ```
+`index.html` dosyası, projenin ana giriş noktasıdır ve temel yapıyı, gerekli script ve stil dosyalarına referansları içerir.
 
 
+## index.js dosyası oluşturuldu
 
+`index.js` dosyası projeye eklenmiştir. Bu dosya, uygulamanın ana JavaScript işlevselliğini yönetmek için kullanılacaktır.
+## data-sap-ui-onInit Açıklaması
+
+`data-sap-ui-onInit="module:ui5/product/list/index"` ifadesi, `index.html` dosyasındaki `<script>` etiketi içinde kullanılır. Bu özellik, SAPUI5 uygulaması başlatılırken belirtilen modülün (`ui5/product/list/index`) yüklenmesini ve çalıştırılmasını sağlar. Böylece uygulamanın başlangıcında gerekli JavaScript kodları otomatik olarak devreye girer.
+
+
+## Body Etiketine Eklenen Sınıf
+
+`<body class="sapUiBody">` şeklinde, `body` etiketine `sapUiBody` sınıfı eklenmiştir. Bu sınıf, SAPUI5 uygulamalarında temel stil ve düzenlemelerin uygulanmasını sağlar.
+
+## index.js Dosyasına Eklenen Kod
+
+`console.log("Hello, from Ui5");` satırı, `index.js` dosyasına eklenmiştir. Bu kod, uygulama başlatıldığında tarayıcı konsolunda "Hello, from Ui5" mesajının görüntülenmesini sağlar.
+
+![Console Çıktısı](image/console.png)
