@@ -20,4 +20,4 @@
 
 `console.log("Hello, from Ui5");` satırı, `index.js` dosyasına eklenmiştir. Bu kod, uygulama başlatıldığında tarayıcı konsolunda "Hello, from Ui5" mesajının görüntülenmesini sağlar.
 
-![Console Çıktısı](image/1.2/console.png)
+![Console Çıktısı](./image/1.2/console.png)
