@@ -28,7 +28,7 @@ sap.ui.define(['sap/m/Button'], function(Button) {
 });
 ```
 
-buttonun içeriğini artık fonksiyon ile çağırabiliriz ve index.html de buttonumu
+buttonun içeriğini artık fonksiyon ile çağırabiliriz ve index.html de buttonu
 
 ```javascript
 sap.ui.define(['sap/m/Button'], function(Button) {
