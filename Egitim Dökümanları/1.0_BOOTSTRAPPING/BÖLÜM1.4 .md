@@ -41,4 +41,4 @@ sap.ui.define(['sap/m/Button'], function(Button) {
 ```
 Artık `index.html` dosyamızda daha önce eklediğimiz `data-sap-ui-libs='sap.m'` kütüphanesine gerek kalmadı, bu satırı silebiliriz.
 
-![Gereksiz kütüphaneyi index.html'den silme](./Image/1/1.4/gereksiz_kütüphaneyi_index_htmlden_sil.png)
+![Gereksiz kütüphaneyi index.html'den silme](/Image/1/1.4/gereksiz_kütüphaneyi_index_htmlden_sil.png)
