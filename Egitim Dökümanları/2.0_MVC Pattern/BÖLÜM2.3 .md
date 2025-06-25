@@ -11,8 +11,10 @@ SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve k
 ### Controller Dosyası Oluşturma
 - Yeni klasör adı: `controller`
 - Yeni dosya: `App.controller.js`  
-    (Dosya adı serbest ama `controller.js` ile bitmeli)
+(Dosya adı serbest ama `controller.js` ile bitmeli)
+
 ![Controller](/Image/2/2.3/1.Controller.png)
+
 
 ### Controller Yapısı
 - `sap.ui.define` ile modül tanımı yapılır.
@@ -25,7 +27,9 @@ SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve k
 - `sap/m/MessageToast` kullanılarak mesaj gösterilir:
 
 ```js
-MessageToast.show("New product created", { at: "center top" });
+    MessageToast.show("Create New Product button pressed", {
+        at: 'center top'
+    });
 ```
 
 ### View Dosyasına Controller Bağlama
