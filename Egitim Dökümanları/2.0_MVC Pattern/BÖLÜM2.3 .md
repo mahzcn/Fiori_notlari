@@ -2,8 +2,6 @@
 
 SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve kullanımı.
 
-##  Öne Çıkan Adımlar
-
 ### Controller Neden Gerekli?
 - View (görünüm), sadece veri göstermek için kullanılır.
 - Kullanıcı etkileşimi (örneğin butona tıklama) gerektiğinde controller gerekir.
@@ -49,6 +47,6 @@ press="onPressCreateNewProduct"
 - Butona tıklandığında ekranın üst-orta kısmında mesaj çıkıyor.
 
 ---
-
+![Finish](/Image/2/2.3/2.Finish.png)
 ##  Sonuç
-Bu videoda, SAPUI5 uygulamasında bir controller nasıl oluşturulur, view ile nasıl bağlanır ve bir kullanıcı etkileşimi (butona basma) nasıl işlenir örnekle anlatılıyor.
+Bu videoda, SAPUI5 uygulamasında bir controller nasıl oluşturulur, view ile nasıl bağlanır ve bir kullanıcı etkileşimi (butona basma işlemi ) nasıl işlenir örnekle anlatılıyor.
