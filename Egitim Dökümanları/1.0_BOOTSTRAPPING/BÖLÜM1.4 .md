@@ -1,3 +1,5 @@
+[⏮ Önceki bölüm: BÖLÜM1.3](./BÖLÜM1.3%20.md)
+
 Aşağıda belirtmiş olduğum button u class'a alacağım bu classa aldıktan sonra performans daha artmış olacak
 ``` javascript
 new sap.m.Button('idMyButton', {
@@ -42,3 +44,4 @@ sap.ui.define(['sap/m/Button'], function(Button) {
 Artık `index.html` dosyamızda daha önce eklediğimiz `data-sap-ui-libs='sap.m'` kütüphanesine gerek kalmadı, bu satırı silebiliriz.
 
 ![Gereksiz kütüphaneyi index.html'den silme](/Image/1/1.4/gereksiz_kütüphaneyi_index_htmlden_sil.png)
+[⏭ Sonraki Bölüm: BÖLÜM2.1](../2.0_MVC%20Pattern/BÖLÜM2.1%20.md)

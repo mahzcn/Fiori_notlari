@@ -1,3 +1,5 @@
+[⏮ Önceki bölüm: BÖLÜM1.4](../1.0_BOOTSTRAPPING/BÖLÜM1.4%20.md)
+
 # MVC Nedir? (Model-View-Controller)
 
 MVC (Model-View-Controller), yazılım geliştirmede kullanılan bir mimari desendir. Uygulamanın farklı sorumluluklarını üç ana bileşene ayırır:
@@ -32,3 +34,4 @@ MVC (Model-View-Controller), yazılım geliştirmede kullanılan bir mimari dese
 
 Bu yapı, kodun daha düzenli, bakımı kolay ve geliştirilebilir olmasını sağlar.
 
+[⏭ Sonraki Bölüm: BÖLÜM 2.2](./BÖLÜM2.2%20.md)

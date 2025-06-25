@@ -1,3 +1,5 @@
+[⏮ Önceki bölüm: BÖLÜM 2.1](./BÖLÜM2.1%20.md)
+
 # 🎯 Amaç
 
 Uygulamada buton gibi kontrollerin HTML veya JavaScript içinde değil, ayrı bir XML View dosyasında tanımlanarak MVC mimarisine uygun bir yapı kurulması.
