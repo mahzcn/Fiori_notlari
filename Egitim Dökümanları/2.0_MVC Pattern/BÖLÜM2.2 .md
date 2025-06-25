@@ -4,7 +4,7 @@ Uygulamada buton gibi kontrollerin HTML veya JavaScript içinde değil, ayrı bi
 
 ---
 
-## 📌 Adım Adım Yapılanlar
+##  Adım Adım Yapılanlar
 
 ### 1. MVC Yapısına Geçiş Başlatılıyor
 
