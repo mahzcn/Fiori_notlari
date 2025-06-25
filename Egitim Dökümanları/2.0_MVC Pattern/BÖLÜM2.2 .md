@@ -1,6 +1,8 @@
 [⏮ Önceki bölüm: BÖLÜM 2.1](./BÖLÜM2.1%20.md)
 
-# 🎯 Amaç
+# View yapısı
+
+## 🎯 Amaç
 
 Uygulamada buton gibi kontrollerin HTML veya JavaScript içinde değil, ayrı bir XML View dosyasında tanımlanarak MVC mimarisine uygun bir yapı kurulması.
 
@@ -47,10 +49,13 @@ Uygulamada buton gibi kontrollerin HTML veya JavaScript içinde değil, ayrı bi
 - Oluşan View nesnesi `index.html` içindeki content alanına eklenir.
 
 ```javascript
-sap.ui.core.mvc.XMLView.create({
-    viewName: "view.App"
-}).then(function(oView){
-    oView.placeAt("content");
+sap.ui.define(['sap/ui/core/mvc/XMLView'], function(XMLView) {
+    "use strict";
+    
+    XMLView.create({
+        viewName: "ui5.product.list.view.App"}).then(function(oView){
+            oView.placeAt("content");
+        })
 });
 ```
 
@@ -67,3 +72,5 @@ sap.ui.core.mvc.XMLView.create({
 - MVC mimarisi kodun daha modüler, test edilebilir ve bakımı kolay olmasını sağlar.
 - `index.js` dosyasında artık doğrudan UI elemanları değil, XML view üzerinden tanımlı kontroller kullanılacak.
 - Bu yapı bir sonraki adımda controller (denetleyici) dosyası ile genişletilecek.
+
+[⏭ Sonraki Bölüm: BÖLÜM 2.3](./BÖLÜM2.3%20.md)

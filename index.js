@@ -1,9 +1,8 @@
-sap.ui.define(['sap/m/Button'], function(Button) {
+sap.ui.define(['sap/ui/core/mvc/XMLView'], function(XMLView) {
     "use strict";
-    new Button( {
-    text: "Create new Product",
-    press: () => {
-        console.log("Button pressed");
-    }
-}).placeAt("content");
+    
+    XMLView.create({
+        viewName: "ui5.product.list.view.App"}).then(function(oView){
+            oView.placeAt("content");
+        })
 });
