@@ -1,8 +1,10 @@
-sap.ui.define(['sap/ui/core/mvc/XMLView'], function(XMLView) {
+sap.ui.define(['sap/ui/core/ComponentContainer'], function(ComponentContainer) {
     "use strict";
-    
-    XMLView.create({
-        viewName: "ui5.product.list.view.App"}).then(function(oView){
-            oView.placeAt("content");
-        })
+    new ComponentContainer({
+        name: "ui5.product.list",
+        settings:{
+            id:"ui5.product.list"
+        },
+        async: true,
+    }).placeAt("content")
 });

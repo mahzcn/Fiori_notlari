@@ -7,7 +7,7 @@ sap.ui.define([
         onPressCreateNewProduct: function() {
             MessageToast.show('Create New Product button pressed', {
                 at: 'center top'
-            });
+            })
         }
-    });
-});
+    })
+})

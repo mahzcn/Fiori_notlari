@@ -10,3 +10,4 @@
 ### 2.0_MVC Pattern
 - [BÖLÜM2.1](Egitim%20D%C3%B6k%C3%BCmanlar%C4%B1/2.0_MVC%20Pattern/B%C3%96L%C3%9CM2.1%20.md)
 - [BÖLÜM2.2](Egitim%20D%C3%B6k%C3%BCmanlar%C4%B1/2.0_MVC%20Pattern/B%C3%96L%C3%9CM2.2%20.md)
+- [BÖLÜM2.3](./Egitim%20Dökümanları/2.0_MVC%20Pattern/BÖLÜM2.3%20.md)

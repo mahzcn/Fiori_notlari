@@ -1,5 +1,5 @@
 # Controller
-
+[⏮ Önceki bölüm: BÖLÜM 2.2](./BÖLÜM2.2%20.md)
 SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve kullanımı.
 
 ### Controller Neden Gerekli?
@@ -25,8 +25,12 @@ SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve k
 - `sap/m/MessageToast` kullanılarak mesaj gösterilir:
 
 ```js
-    MessageToast.show("Create New Product button pressed", {
-        at: 'center top'
+    return Controller.extend('ui5.product.controller.App', {
+        onPressCreateNewProduct: function() {
+            MessageToast.show('Create New Product button pressed', {
+                at: 'center top'
+            });
+        }
     });
 ```
 
@@ -37,10 +41,11 @@ SAPUI5 uygulamasında Controller (Denetleyici) dosyasının oluşturulması ve k
 controllerName="ui5.product.list.controller.App"
 ```
 
-- Butonun `press` event’ine handler atanır:
+- Butonun `press` event’ine `press='onPressCreateNewProduct'` atanır:
 
 ```xml
-press="onPressCreateNewProduct"
+
+    <Button text="Create new product" press='onPressCreateNewProduct'/>
 ```
 
 ### Test Sonucu
@@ -49,4 +54,5 @@ press="onPressCreateNewProduct"
 ---
 ![Finish](/Image/2/2.3/2.Finish.png)
 ##  Sonuç
-Bu videoda, SAPUI5 uygulamasında bir controller nasıl oluşturulur, view ile nasıl bağlanır ve bir kullanıcı etkileşimi (butona basma işlemi ) nasıl işlenir örnekle anlatılıyor.
+ SAPUI5 uygulamasında bir controller nasıl oluşturulur, view ile nasıl bağlanır ve bir kullanıcı etkileşimi (butona basma işlemi ) nasıl işlenir örnekle anlatıldı
+[⏭ Sonraki Bölüm: BÖLÜM 2.4](./BÖLÜM2.4%20.md)
