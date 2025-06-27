@@ -8,17 +8,15 @@
     <!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
     <!-- ui5.product.list name space'sinin sağ tarafında html alanın yolu bulunmaktadır -->
     <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-        data-sap-ui-theme="sap_horizon" 
-        data-sap-ui-compatVersion="edge"
-        data-sap-ui-async="true" data-sap-ui-resourceroots='{
+        data-sap-ui-theme="sap_horizon" data-sap-ui-compatVersion="edge" data-sap-ui-async="true"
+        data-sap-ui-resourceroots='{
             "ui5.product.list": "./"
-        }' data-sap-ui-onInit="module:ui5/product/list/index"></script>
+        }' data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"></script>
     <!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
 </head>
 
-<body class="sapUiBody" id ="content">
-
-
+<body class="sapUiBody" id="content">
+    <div data-sap-ui-component data-name="ui5.product.list" data-id="container" data-settings='{"id": "ui5.demo"}'></div>
 </body>
 
 </html>
