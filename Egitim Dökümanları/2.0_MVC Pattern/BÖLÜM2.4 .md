@@ -3,6 +3,7 @@
 Bu bölümde, uygulamanın **Component** yapısına kapsüllenmesiyle yeniden kullanılabilir ve esnek bir mimari oluşturulması anlatılmaktadır.
 
 ---
+[⏮ Önceki bölüm: BÖLÜM 2.3](./BÖLÜM2.3%20.md)
 
 ## 🎯 Amaç
 
@@ -25,23 +26,23 @@ Bu bölümde, uygulamanın **Component** yapısına kapsüllenmesiyle yeniden ku
         - `type`: XML
         - `id`: App
 ```js
-sap.ui.define(["sap/ui/core/UIComponent", function (UIComponent) {
+sap.ui.define([
+    "sap/ui/core/UIComponent"
+], function (UIComponent) {
     "use strict";
 
-    return UIComponent.extend("ui5.product.Componenet", {
+    return UIComponent.extend("ui5.product.list.Component", {
         metadata: {
-            interface: ["sap.ui.core.IAsyncContentCreation"],
+            interfaces: ["sap.ui.core.IAsyncContentCreation"],
             rootView: {
                 viewName: "ui5.product.list.view.App",
                 type: "XML",
                 id: "app"
             }
         }
-    }
-    )
-}
-]
-)
+    });
+});
+
 ```
 
 4. `index.js` güncellendi:
@@ -71,3 +72,4 @@ sap.ui.define(["sap/ui/core/UIComponent", function (UIComponent) {
 ## 📚 Sonraki Adım
 
 - Uygulamaya internationalization (**i18n**) desteği eklenecek.
+[⏭ Sonraki Bölüm: BÖLÜM 2.5](./BÖLÜM2.5%20.md)

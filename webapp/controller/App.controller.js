@@ -5,8 +5,11 @@ sap.ui.define([
     "use strict";
     return Controller.extend('ui5.product.controller.App', {
         onPressCreateNewProduct: function() {
-            MessageToast.show('Create New Product button pressed', {
-                at: 'center top'
+
+            var oBoundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+
+            MessageToast.show(oBoundle.getText("messageText",["Salatalık"]), {
+                at: 'center center'
             })
         }
     })
