@@ -10,6 +10,7 @@ sap.ui.define([
 
             MessageToast.show(oBoundle.getText("messageText",["Salatalık"]), {
                 at: 'center center'
+                
             })
         }
     })
