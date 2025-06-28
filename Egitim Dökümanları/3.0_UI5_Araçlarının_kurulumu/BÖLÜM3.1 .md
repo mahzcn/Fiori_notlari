@@ -1,5 +1,7 @@
 # UI5 Tooling CLI Kurulumu ve Yapılandırması
 
+[⏮ Önceki bölüm: BÖLÜM 2.6](/Egitim%20Dökümanları/2.0_MVC%20Pattern/BÖLÜM2.6%20.md)
+
 Bu bölümde, **UI5 Tooling CLI**’yi kuracak ve yapılandıracağız. UI5 Tooling, geliştirme sunucusu, derleyici (builder), özel middleware’ler ve daha fazlasını sunarak daha iyi bir geliştirme ortamı sağlar.
 
 ## 1. Proje Dizini ve npm Başlatma
@@ -89,3 +91,5 @@ Konsolda `Server started at http://localhost:8080` mesajını göreceksiniz. Tar
 > ```
 
 ---
+
+[⏭ Sonraki Bölüm: BÖLÜM 3.2](./BÖLÜM3.2.md)

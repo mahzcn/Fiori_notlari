@@ -4,7 +4,7 @@ metadata:
 type: application
 framework:                
   name: SAPUI5
-  version: "1.73.1"
+  version: "1.120.32"
   libraries:
     - name: sap.ui.core
     - name: sap.m

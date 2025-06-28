@@ -1,5 +1,5 @@
 {
-    "_version": "1.73.1",
+    "_version": "1.71.75",
     "sap.app": {
         "id": "ui5.product.list",
         "type": "application",
