@@ -1,7 +1,7 @@
 # UI5 CLI Komutları ve Build Süreci
 
 ## 🔧 Temel CLI Komutları
-[⏮ Önceki bölüm: BÖLÜM 2.6](./BÖLÜM3.1%20.md)
+[⏮ Önceki bölüm: BÖLÜM 3.1](./BÖLÜM3.1%20.md)
 - **UI5 CLI Sürümünü Görüntüleme:**
     ```bash
     ui5 --version   # veya kısa hali: ui5 -v
