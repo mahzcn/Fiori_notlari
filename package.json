@@ -1,0 +1,23 @@
+{
+  "name": "fiori-notlar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahzcn/Fiori-E-itim.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahzcn/Fiori-E-itim/issues"
+  },
+  "homepage": "https://github.com/mahzcn/Fiori-E-itim#readme",
+  "devDependencies": {
+    "@ui5/cli": "^4.0.19"
+  }
+}

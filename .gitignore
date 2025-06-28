@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# UI5 build artifacts
+dist/
+.tmp/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env

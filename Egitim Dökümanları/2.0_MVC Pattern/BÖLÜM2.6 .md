@@ -97,4 +97,4 @@ Manuel yapılan `rootView` ve `i18n` model tanımlamaları kaldırılır. Yerine
 ## 6. Uygulama Test Edilir
 
 Tüm bu değişikliklerden sonra uygulama çalışıyor olmalı. DOM'da oluşturulan `div` incelenerek `data-*` parametrelerinin uygulandığı doğrulanır.
-[⏭ Sonraki Bölüm: BÖLÜM 3.1](./BÖLÜM3.1%20.md)
+[⏭ Sonraki Bölüm: BÖLÜM 3.1](/Egitim%20Dökümanları/3.0_UI5_Araçlarının_kurulumu/BÖLÜM3.1%20.md)
