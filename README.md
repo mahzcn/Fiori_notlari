@@ -1,9 +1,9 @@
 <div align="center" style="display: flex; align-items: center; justify-content: center; gap: 24px;">
-    <img src="https://openui5.org/654aad3012a144881ab07c0bbdd26eb8/phenix_red.svg" alt="SAP Fiori Logo" width="100"/>
+    <img src="https://openui5.org/654aad3012a144881ab07c0bbdd26eb8/phenix_red.svg" alt="SAP Fiori Logo" width="70"/>
     <h1 style="margin: 0;">
         Fiori Eğitimi
     </h1>
-    <img src="https://openui5.org/5bdd288371ed8100415f04563acc8dfe/phenix_blue.svg" alt="SAP Fiori Logo" width="100"/>
+    <img src="https://openui5.org/5bdd288371ed8100415f04563acc8dfe/phenix_blue.svg" alt="SAP Fiori Logo" width="70"/>
 </div>
 
 ## İçindekiler
