@@ -16,9 +16,44 @@
 
 `<body class="sapUiBody">` şeklinde, `body` etiketine `sapUiBody` sınıfı eklenmiştir. Bu sınıf, SAPUI5 uygulamalarında temel stil ve düzenlemelerin uygulanmasını sağlar.
 
+```html
+<!DOCTYPE html> <!-- ! yaparak html doc oluşturabilirsin -->More actions
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiori Eğitim</title> <!-- ! title tag sayfanın başlığını belirler -->
+    <!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
+    <!-- ui5.product.list name space'sinin sağ tarafında html alanın yolu bulunmaktadır -->
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon" data-sap-ui-libs="sap.m" data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true" data-sap-ui-resourceroots='{
+            "ui5.product.list": "./"
+        }' data-sap-ui-onInit="module:ui5/product/list/index"></script>
+    <!-- ! sap-ui-bootstrap, SAPUI5 kütüphanesini yükler -->
+</head>
+
+<body class="sapUiBody">
+<body class="sapUiBody" id ="content">
+
+
+</body>
+
+```
+
 ## index.js Dosyasına Eklenen Kod
 
-`console.log("Hello, from Ui5");` satırı, `index.js` dosyasına eklenmiştir. Bu kod, uygulama başlatıldığında tarayıcı konsolunda "Hello, from Ui5" mesajının görüntülenmesini sağlar.
+```js
+console.log("Hello, from Ui5"); Add commentMore actions
+new sap.m.Button('idMyButton', {
+    text: "Create new Product",
+    press: () => {
+        console.log("Button pressed");
+    }
+}).placeAt("content");
+```
+ satırı, `index.js` dosyasına eklenmiştir. Bu kod, uygulama başlatıldığında tarayıcı konsolunda "Hello, from Ui5" mesajının görüntülenmesini sağlar.
 
 ![Console Çıktısı](/Image/1/1.2/console.png)
 
