@@ -2,29 +2,26 @@
     controllerName="ui5.product.list.controller.App"
     displayBlock="true"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l ="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
     xmlns:mvc="sap.ui.core.mvc">
     <Shell>
         <App class="myProductList">
             <Page class="sapUiResponsiveContentPadding" title="{i18n>apptTitle}">
-                <Input 
-                id="idProductName"
-                class="sapUiTinyMarginEnd"
-                placeholder="{i18n>productName}" 
-                width="20rem" 
-                maxLength="40"/>
-                <Button  text="{i18n>buttonTextCreate}" press='onPressCreateNewProduct' />
-                <List 
-                id="idProductList"
-                class="sapUiTinyMarginTop listWithSmallerTitle" 
-                headerText="{i18n>listHeader}" 
-                noDataText="{i18n>noDataText}"
-                mode="Delete"
-                delete="onPressDeleteProduct">
-                    <items>
-                        <StandardListItem title="{i18n>listItemTitle}1" type="Active" press="onPressProduct"/>
-                        <StandardListItem title="{i18n>listItemTitle}2" type="Active" press="onPressProduct"/>
-                        <StandardListItem title="{i18n>listItemTitle}3" type="Active" press="onPressProduct"/>
-                    </items>
+
+                <List id="idProductList"
+                    class="sapUiTinyMarginTop listWithSmallerTitle"
+                    noDataText="{i18n>noDataText}"
+                    mode="Delete"
+                    delete="onPressDeleteProduct" >
+                <headerToolbar>
+                    <Toolbar >
+                        <Title text="{i18n>listHeader}"/>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://add" press="onPressAddNewProduct"></Button>
+                    </Toolbar>
+                </headerToolbar>
                 </List>
             </Page>
         </App>
