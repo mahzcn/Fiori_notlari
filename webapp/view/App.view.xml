@@ -4,11 +4,22 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
     <Shell>
-        <App>
-            <Page title="{i18n>apptTitle}">
-                <Input placeholder="{i18n>productName}" width="20rem" maxLength="40"/>
-                <Button text="{i18n>buttonTextCreate}" press='onPressCreateNewProduct' />
-                <List headerText="{i18n>listHeader}" noDataText="{i18n>noDataText}">
+        <App class="myProductList">
+            <Page class="sapUiResponsiveContentPadding" title="{i18n>apptTitle}">
+                <Input 
+                id="idProductName"
+                class="sapUiTinyMarginEnd"
+                placeholder="{i18n>productName}" 
+                width="20rem" 
+                maxLength="40"/>
+                <Button  text="{i18n>buttonTextCreate}" press='onPressCreateNewProduct' />
+                <List 
+                id="idProductList"
+                class="sapUiTinyMarginTop listWithSmallerTitle" 
+                headerText="{i18n>listHeader}" 
+                noDataText="{i18n>noDataText}"
+                mode="Delete"
+                delete="onPressDeleteProduct">
                     <items>
                         <StandardListItem title="{i18n>listItemTitle}1" type="Active" press="onPressProduct"/>
                         <StandardListItem title="{i18n>listItemTitle}2" type="Active" press="onPressProduct"/>

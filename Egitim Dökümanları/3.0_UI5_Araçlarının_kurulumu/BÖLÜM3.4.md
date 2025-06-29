@@ -1,6 +1,6 @@
 # UI5 Tooling ile Özel Build Görevi (Custom Task) Oluşturma
 [⏮ Önceki bölüm: BÖLÜM 3.3](./BÖLÜM3.3.md)
-## 📁 Klasör Yapısı
+##  Klasör Yapısı
 
 Proje kök dizininde aşağıdaki gibi bir yapı oluşturun:
 
@@ -11,7 +11,7 @@ Proje kök dizininde aşağıdaki gibi bir yapı oluşturun:
         └── transpile-babel.js
 ```
 
-## 📦 Babel ve Gerekli Eklentilerin Kurulumu
+##  Babel ve Gerekli Eklentilerin Kurulumu
 
 Terminalde aşağıdaki komutla Babel bağımlılıklarını kurun:
 
@@ -40,38 +40,50 @@ Script alanına ise:
 }
 ```
 
-## 🧠 transpile-babel.js İçeriği
+##  transpile-babel.js İçeriği
 
 `lib/tasks/transpile-babel.js` dosyasına aşağıdaki kodu ekleyin:
 
 ```js
 import babel from '@babel/core';
+import { use } from 'react';
 
-export default async function ({ workspace, log }) {
-  const resources = await workspace.byGlob([
-    '**/*.js',
-    '!**/*qunit.js'
-  ]);
-
-  await Promise.all(
-    resources.map(resource =>
-      resource.getString().then(async (content) => {
-        log.info(`Transpiling file: ${resource.getPath()}`);
-        const result = await babel.transformAsync(content, {
-          sourceMaps: false,
-          presets: ['@babel/preset-env'],
-          plugins: [
-            ['@babel/plugin-proposal-object-rest-spread', { loose: true, useBuiltIns: true }],
-            ['@babel/plugin-transform-destructuring', { loose: true, useBuiltIns: true }],
-            ['@babel/plugin-transform-spread', { loose: true }]
-          ]
-        });
-        resource.setString(result.code);
-        await workspace.write(resource);
-      })
-    )
-  );
+export default async function ({workspace, log}) {
+    return workspace.byGlob(['**/*.js', '**/*qunit.js']).then(resources => {
+        return Promise.all(
+            resources.map(resource => {
+                return resource
+                    .getString()
+                    .then(value => {
+                        log.info(`Transpiling File ${resource.getPath()}`);
+                        return babel.transformAsync(value, {
+                            sourceMaps: false,
+                            presets: ['@babel/preset-env'],
+                            plugins: [
+                                [
+                                    "@babel/plugin-proposal-object-rest-spread",
+                                    { loose: true, useBuiltIns: true }
+                                ],
+                                [
+                                    "@babel/plugin-transform-destructuring",
+                                    { loose: true, useBuiltIns: true }
+                                ],
+                                [
+                                    "@babel/plugin-transform-spread",
+                                    { loose: true }
+                                ]
+                            ]
+                        }).then(result => {
+                            resource.setString(result.code)
+                            return workspace.write(resource)
+                        })
+                    })
+            })
+        )
+    })
 }
+
+
 
 // Opsiyonel: Gerekli bağımlılıkları sınırlandırmak için
 export function determineRequiredDependencies() {
@@ -79,7 +91,7 @@ export function determineRequiredDependencies() {
 }
 ```
 
-## 🛠️ ui5.yaml Yapılandırması
+##  ui5.yaml Yapılandırması
 
 `ui5.yaml` dosyasının en altına şunu ekleyin:
 
@@ -107,7 +119,7 @@ task:
 
 > **Not:** YAML girintilerine dikkat edin.
 
-## 🧪 Test Etme
+##  Test Etme
 
 Derleme işlemini başlatmak için:
 
@@ -117,7 +129,7 @@ npm run build
 
 Başarılıysa, `transpiling file: ...` şeklinde loglar göreceksiniz.
 
-## 💡 ES6 Kod Kullanımı Örneği
+##  ES6 Kod Kullanımı Örneği
 
 Projeye aşağıdaki gibi bir ES6 kodu ekleyin:
 
@@ -128,7 +140,7 @@ const sayHello = () => console.log(message);
 
 Babel bu kodu eski tarayıcılarla uyumlu hale getirecektir.
 
-## 🎯 Ekstra Bilgi
+##  Ekstra Bilgi
 
 UI5 Tooling v3 ile özel görevlerde kullanılacak bağımlılıkları belirlemek için `determineRequiredDependencies` fonksiyonu eklenebilir:
 
@@ -140,7 +152,7 @@ export function determineRequiredDependencies() {
 
 Hiçbir şey eklemezseniz, varsayılan olarak tüm bağımlılıklar dışlanır.
 
-## ✅ Sonuç
+## Sonuç
 
 Bu adımlarla UI5 Tooling için özel bir build görevi oluşturabilir ve ES6 kodunuzu eski tarayıcılarla uyumlu hale getirebilirsiniz.
-[⏭ Sonraki Bölüm: BÖLÜM 4.1(./BÖLÜM4.1.md)
+[⏭ Sonraki Bölüm: BÖLÜM 4.1](/Egitim%20Dökümanları/4.0_List_Controls/BÖLÜM4.1.md)
