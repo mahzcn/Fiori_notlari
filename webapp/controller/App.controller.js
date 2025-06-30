@@ -5,49 +5,32 @@ sap.ui.define([
     "sap/m/ObjectStatus",
     "sap/ui/core/Fragment",
     "ui5/product/list/model/models"
-], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus, Fragment ,models) {
+], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus,  Fragment ,models) {
     "use strict";
     return Controller.extend('ui5.product.controller.App', {
         onPressCreateNewProduct() {
+            const oData = this.getView().getModel("input").getData()
 
-            // Get the product name from the input field
-            const sProductNAme = this.getView().byId("idProductName").getValue();
-            const oCatagory = this.getView().byId("idCatogary").getSelectedItem();
-            const sPrice = this.getView().byId("idPrice").getValue();
-            const sSktDate = this.getView().byId("idSktDate").getDateValue();
-            const sAktarimDate = this.getView().byId("idAktarimDate").getDateValue();
-            // Add new item to the list
-            this.getView().byId("idProductList").addItem(
-                new ObjectListItem({
-                    title: sProductNAme,
-                    number: sPrice,
-                    numberUnit: "TRY",
-                    attributes: [
-                        new ObjectAttribute({
-                            title: "Katagori",
-                            text: oCatagory.getText()
-                        }),
-                        new ObjectAttribute({
-                            title: "SKT",
-                            text: sSktDate ? sSktDate.toLocaleDateString() : ""
-                        })
-                    ],
-                    firstStatus: new ObjectStatus({
-                        text: this._getAvailabilityText(sAktarimDate),
-                        state: this._getAvailabilityState(sAktarimDate)
-                    })
-                })
-            );
+            //  Add new item to the list
+            const oProductModel = this.getView().getModel("product")
+            const aItems = oProductModel.getProperty("/items")
+
+            aItems.push(oData)
+            oProductModel.setProperty("/items", aItems)
+
+
             this._oCreateProductDialog.close()
         },
         onPressDeleteProduct(oEvent) {
+            const oItem = oEvent.getParameter("listItem");
 
             // Get the selected item from the list
-            const oItem = oEvent.getParameter("listItem");
-            // If an item is selected, remove it from the list
-            if (oItem) {
-                this.getView().byId("idProductList").removeItem(oItem);
-            }
+            const oModel = this.getView().getModel("product")
+            const iIndex = oItem.getBindingContext("product").getPath().split("/").pop()
+            
+            oModel.getData().items.splice(iIndex, 1)
+            oModel.refresh()
+            console.log(iIndex)
         }, onPressAddNewProduct() {
             if (!this._oCreateProductDialog) {
             Fragment.load({

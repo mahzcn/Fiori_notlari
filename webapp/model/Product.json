@@ -1,0 +1,45 @@
+{
+    "items": [
+        {
+            "Name": "Domates",
+            "Category" :"0",
+            "Price" : 24,
+            "Currency": "TRY",
+            "SktDate" : "2024.01.01",
+            "AktarimDate": "2025.01.01"
+        },
+        {
+            "Name": "Çilek",
+            "Category" :"1",
+            "Price" : 60,
+            "Currency": "TRY",
+            "SktDate" : "2025.06.01",
+            "AktarimDate": "2025.01.01"
+        },
+        {
+            "Name": "Salatalık",
+            "Category" :"0",
+            "Price" : 26,
+            "Currency": "TRY",
+            "SktDate" : "2024.01.01",
+            "AktarimDate": "2025.01.01"
+        },
+        {
+            "Name": "Tablet",
+            "Category" :"2",
+            "Price" : 9999,
+            "Currency": "TRY",
+            "SktDate" : "2024.01.01",
+            "AktarimDate": "2025.01.01"
+        },
+        {
+            "Name": "Biber",
+            "Category" :"0",
+            "Price" : 12,
+            "Currency": "TRY",
+            "SktDate" : "2024.01.01",
+            "AktarimDate": "2025.01.01"
+        }        
+
+    ]
+}

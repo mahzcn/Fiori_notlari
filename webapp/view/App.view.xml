@@ -1,9 +1,10 @@
+<!-- 5.3 Aggregation Binding 6.00 -->
 <mvc:View
     controllerName="ui5.product.list.controller.App"
     displayBlock="true"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
-    xmlns:l ="sap.ui.layout"
+    xmlns:l="sap.ui.layout"
     xmlns:form="sap.ui.layout.form"
     xmlns:mvc="sap.ui.core.mvc">
     <Shell>
@@ -11,17 +12,33 @@
             <Page class="sapUiResponsiveContentPadding" title="{i18n>apptTitle}">
 
                 <List id="idProductList"
+                    items="{product>/items}"
                     class="sapUiTinyMarginTop listWithSmallerTitle"
                     noDataText="{i18n>noDataText}"
                     mode="Delete"
-                    delete="onPressDeleteProduct" >
-                <headerToolbar>
-                    <Toolbar >
-                        <Title text="{i18n>listHeader}"/>
-                        <ToolbarSpacer />
-                        <Button icon="sap-icon://add" press="onPressAddNewProduct"></Button>
-                    </Toolbar>
-                </headerToolbar>
+                    delete="onPressDeleteProduct">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="{i18n>listHeader}" />
+                            <ToolbarSpacer />
+                            <Button icon="sap-icon://add" press="onPressAddNewProduct"></Button>
+                        </Toolbar>
+                    </headerToolbar>
+                    <items>
+                        <ObjectListItem
+                            title="{product>Name}"
+                            number="{product>Price}"
+                            numberUnit="TRY"
+                        >
+                            <attributes>
+                                <ObjectAttribute title="Category" text="{product>Category}"></ObjectAttribute>
+                                <ObjectAttribute title="SKT" text="{product>SktDate}"></ObjectAttribute>
+                            </attributes>
+                            <firstStatus>
+                                <ObjectStatus text="{product>AktarimDate}"></ObjectStatus>
+                            </firstStatus>
+                        </ObjectListItem>
+                    </items>
                 </List>
             </Page>
         </App>

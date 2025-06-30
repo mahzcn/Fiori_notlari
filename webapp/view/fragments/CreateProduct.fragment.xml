@@ -23,7 +23,11 @@
                 <form:content>
                     <core:Title text="{i18n>formTitle}" level="H2" />
                     <Label text="{i18n>productName}" labelFor="idProductName" />
-                    <Input id="idProductName" maxLength="40" value="{input>/Name}"/>
+                    <Input 
+                    id="idProductName" 
+                    maxLength="40" 
+                    value="{input>/Name}"
+                    valueLiveUpdate="true"/>
                     <Label text="{i18n>category}" labelFor="idCatogary" />
                     <ComboBox id="idCatogary" selectedKey="{input>/Category}"    >
                         <core:Item key="" text="" />
@@ -42,17 +46,17 @@
 
                     <core:Title text="{i18n>formDate}" level="H2" />
                     <Label text="{i18n>sktDate}" labelFor="idSktDate" />
-                    <DatePicker id="idSktDate" value="{input>/SktDate}" />
+                    <DatePicker id="idSktDate" dateValue="{input>/SktDate}" />
                     <Label text="{i18n>AktarimDate}" labelFor="idAktarimDate" />
-                    <DatePicker id="idAktarimDate" value="{input>/AktarimDate}" />
+                    <DatePicker id="idAktarimDate" dateValue="{input>/AktarimDate}" />
                 </form:content>
             </form:SimpleForm>
         </content>
     <beginButton>
-          <Button type="Emphasized" text="{i18n>buttonTextCreate}" press='onPressCreateNewProduct'/>
+        <Button type="Emphasized" text="{i18n>buttonTextCreate}" press='onPressCreateNewProduct'/>
     </beginButton>
     <endButton>
-          <Button text="{i18n>buttonTextCancel}" press='onPressCancelNewProduct'/>
+        <Button text="{i18n>buttonTextCancel}" press='onPressCancelNewProduct'/>
     </endButton>
     </Dialog>
 </core:FragmentDefinition>
