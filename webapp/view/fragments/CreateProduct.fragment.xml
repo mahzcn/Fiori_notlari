@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:form="sap.ui.layout.form">
-    <Dialog title="{i18n>createNewProduct}" contentWidth="800px">
+    <Dialog title="{i18n>createNewProduct}" contentWidth="800px" afterClose="onAfterCloseDialog">
         <content>
             <form:SimpleForm
                 layout="ResponsiveGridLayout"
@@ -23,9 +23,9 @@
                 <form:content>
                     <core:Title text="{i18n>formTitle}" level="H2" />
                     <Label text="{i18n>productName}" labelFor="idProductName" />
-                    <Input id="idProductName" maxLength="40" />
+                    <Input id="idProductName" maxLength="40" value="{input>/Name}"/>
                     <Label text="{i18n>category}" labelFor="idCatogary" />
-                    <ComboBox id="idCatogary">
+                    <ComboBox id="idCatogary" selectedKey="{input>/Category}"    >
                         <core:Item key="" text="" />
                         <core:Item key="0" text="Sebze" />
                         <core:Item key="1" text="Meyve" />
@@ -33,7 +33,7 @@
                         <core:Item key="3" text="Giyim" />
                     </ComboBox>
                     <Label text="{i18n>price}" labelFor="idPrice" />
-                    <Input id="idPrice" type="Number" />
+                    <Input id="idPrice" type="Number" value="{input>/Price}"/>
                     <Input value="TRY" editable="false">
                         <layoutData>
                             <l:GridData span="XL1 L2 M3 S12"></l:GridData>
@@ -42,9 +42,9 @@
 
                     <core:Title text="{i18n>formDate}" level="H2" />
                     <Label text="{i18n>sktDate}" labelFor="idSktDate" />
-                    <DatePicker id="idSktDate" />
+                    <DatePicker id="idSktDate" value="{input>/SktDate}" />
                     <Label text="{i18n>AktarimDate}" labelFor="idAktarimDate" />
-                    <DatePicker id="idAktarimDate" placeholder="{i18n>AktarimDate}" />
+                    <DatePicker id="idAktarimDate" value="{input>/AktarimDate}" />
                 </form:content>
             </form:SimpleForm>
         </content>

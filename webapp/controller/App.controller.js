@@ -3,8 +3,9 @@ sap.ui.define([
     "sap/m/ObjectListItem",
     "sap/m/ObjectAttribute",
     "sap/m/ObjectStatus",
-    "sap/ui/core/Fragment"
-], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus, Fragment) {
+    "sap/ui/core/Fragment",
+    "ui5/product/list/model/models"
+], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus, Fragment ,models) {
     "use strict";
     return Controller.extend('ui5.product.controller.App', {
         onPressCreateNewProduct() {
@@ -71,6 +72,9 @@ sap.ui.define([
         },
         _getAvailabilityState(oDate) {
             return oDate > new Date() ? "Success" : "Error";
+        },
+        onAfterCloseDialog() {
+            this.getOwnerComponent().setModel(models.createInputModel(), "input")
         }
     })
 })
