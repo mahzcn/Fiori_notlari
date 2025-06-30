@@ -27,15 +27,35 @@
                     <items>
                         <ObjectListItem
                             title="{product>Name}"
-                            number="{product>Price}"
-                            numberUnit="TRY"
+                            number="{
+                            parts : ['product>Price' , 'product>Currency'],
+                            type: 'sap.ui.model.type.Currency',
+                            formatOptions: {
+                                showMeasure: false
+                            }
+                            }"
+                            numberUnit="{product>Currency}"
                         >
                             <attributes>
                                 <ObjectAttribute title="Category" text="{product>Category}"></ObjectAttribute>
-                                <ObjectAttribute title="SKT" text="{product>SktDate}"></ObjectAttribute>
+                                <ObjectAttribute title="SKT" text="{
+                                path: 'product>SktDate',
+                                type: 'sap.ui.model.type.Date',
+                                formatOptions: {
+                                    source: {  pattern : 'yyyy-MM-ddTHH:mm:ss.SSSX' },
+                                    style: 'long'
+                                }
+                                }"></ObjectAttribute>
                             </attributes>
                             <firstStatus>
-                                <ObjectStatus text="{product>AktarimDate}"></ObjectStatus>
+                                <ObjectStatus text="{
+                                path: 'product>AktarimDate',
+                                formatter: '.formatter.formatAvailabilityText'
+                                }"
+                                state="{
+                                path: 'product>AktarimDate',
+                                formatter: '.formatter.formatAvailabilityState'
+                                }"></ObjectStatus>
                             </firstStatus>
                         </ObjectListItem>
                     </items>

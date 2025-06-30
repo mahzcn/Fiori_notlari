@@ -4,10 +4,13 @@ sap.ui.define([
     "sap/m/ObjectAttribute",
     "sap/m/ObjectStatus",
     "sap/ui/core/Fragment",
-    "ui5/product/list/model/models"
-], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus,  Fragment ,models) {
+    "ui5/product/list/model/models",
+    "ui5/product/list/model/formatter"
+], function (Controller, ObjectListItem, ObjectAttribute, ObjectStatus,  Fragment ,models,formatter) {
     "use strict";
     return Controller.extend('ui5.product.controller.App', {
+        formatter:formatter,
+
         onPressCreateNewProduct() {
             const oData = this.getView().getModel("input").getData()
 
@@ -50,12 +53,6 @@ sap.ui.define([
             this._oCreateProductDialog.close()
         }
         ,
-        _getAvailabilityText(oDate) {
-            return oDate > new Date() ? "Taze" : "Bozuk";
-        },
-        _getAvailabilityState(oDate) {
-            return oDate > new Date() ? "Success" : "Error";
-        },
         onAfterCloseDialog() {
             this.getOwnerComponent().setModel(models.createInputModel(), "input")
         }
